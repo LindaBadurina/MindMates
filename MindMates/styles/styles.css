@@ -1,0 +1,307 @@
+/* Initital Settings */
+body {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.2;
+}
+
+/* APPLIES TO ALL SCREENS */
+/* Determines colour and styling of container's background */
+.app-container {
+  max-width: 390px;
+  max-height: 844px;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to bottom, #afd5d8 0%, #41909b 25%, #091016 100%);
+  overflow: hidden;
+}
+
+.screen {
+  margin-bottom: 2rem;;
+  position: relative; 
+  width: 95%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+/* Universal headers */
+.screen h1 {
+  font-size: 2.5rem;
+/*  font-weight:bolder; */
+  margin-top: 1rem;
+  color: white;
+  text-align: center;
+}
+
+.screen h2 {
+  font-size: 1.6rem;
+  margin-top: 0rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: white;
+  text-align: center;
+}
+
+/* Buttons */
+
+.button-container {
+  position: absolute; 
+  bottom: 0; 
+  padding-top: 1rem;
+/*  padding-bottom: 3rem;*/
+  min-width: 70%;
+  max-width: 80%;
+  height: auto;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.screen button {
+  margin-bottom: 0;
+  width: 100%;
+  font-size: 1.5rem;
+  background-color: #41909b;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.7rem;
+  height: auto;
+}
+
+.screen button:hover {
+  color: #091016;
+  background-color: #edf6f7;
+}
+
+.screen .skip-button {
+  bottom: -6%;
+  font-size: 1.2rem;
+  background-color: transparent;
+}
+
+.screen .skip-button:hover {
+  color: #afd5d8;
+  background-color: transparent;
+}
+
+/* Logo Image */
+.logo-container img {
+  max-width: 100%;
+  margin-top: -4rem;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+.background-logo-container img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  width: 105%;
+  opacity: 0.3;
+}
+
+/* Logo Image: Animation */
+.logo-container img {
+  width: 500px;
+  animation: zoomIn 2.5s forwards;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(10);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+
+  75% {
+    transform: scale(3);
+  }
+
+  100% {
+    transform: scale(1.25);
+  }
+}
+
+/* APPLIES TO SECOND SCREEN */
+/* User's name input */
+#name {
+  border: none;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  background-color: transparent;
+  font-size: 1.5rem;
+  color: white;
+  width: 70%;
+  padding-bottom: 1rem;
+  margin-top: -3rem;
+}
+
+/* Profile photo images */
+.icons-container {
+  position: relative;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 8rem;
+}
+
+.icons-container a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  text-decoration: none;
+}
+
+.icons-container img {
+  max-width: 90%;
+  height: auto;
+}
+
+.icons-container a:hover img {
+  border: 2px solid #41909b;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+/* THIRD SCREEN */
+/* Emotion icon images */
+
+.emotion-container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+.emotion-container img {
+  max-width: 100%;
+  margin-top: -4rem;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+.emotion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  text-decoration: none;
+}
+
+.emotion:hover {
+  opacity: 50%;
+}
+
+.emotion img {
+  width: 80%;
+  height: auto;
+}
+
+.emotion-label {
+  font-size: 1.2rem;
+  color: white;
+  margin-top: -1.6rem;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+/* FOURTH-SIXTH SCREEN */
+
+/* Styles the slider input */
+.rangecontainer {
+  width: 80%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 4rem;
+}
+
+.rangecontainer input[type="range"] {
+  width: 100%;
+  display: block;
+}
+
+/* Styles labels below sliders */
+.slider-labels {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.2rem;
+  color: white;
+}
+
+.label-left {
+  position: relative;
+  left: 0;
+}
+
+.label-right {
+  position: relative;
+  right: 0;
+}
+
+/* FINAL SCREEN */
+.endpagecontainer {
+  padding: 2.5rem;
+}
+
+#screen7 h2 {
+  text-align: left;
+  padding-bottom: 0;
+}
+
+/* Contains loading animation */
+.loading-animation {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 15px;
+  background-color: white;
+  animation: blue 2s infinite;
+}
+
+.circle:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.circle:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes blue {
+  0% {
+    background-color: white;
+  }
+  50% {
+    background-color: #41909b;
+  }
+  100% {
+    background-color: white;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .app-container {
+    max-width: fit-content;
+  }
+}
+
